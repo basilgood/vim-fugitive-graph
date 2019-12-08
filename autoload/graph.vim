@@ -30,7 +30,7 @@ function! graph#GlogGraph(showAll)
   if a:showAll
     let all = " --all"
   endif
-  let git_log_command = "git log --decorate --graph --oneline --color=always" . all
+  let git_log_command = "git log --decorate --graph --date-order --oneline --color=always" . all
   execute "silent 0read !". git_log_command
 
   set nowrap
