@@ -34,7 +34,7 @@ function! graph#GlogGraph(showAll)
   execute "silent 0read !". git_log_command
 
   set nowrap
-  if !AnsiEsc#IsAnsiEscEnabled(bufnr("%"))
+  if !AnsiEsc#AnsiEsc(bufnr("%"))
     AnsiEsc
   endif
   normal 1G
